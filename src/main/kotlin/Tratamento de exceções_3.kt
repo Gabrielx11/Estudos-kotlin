@@ -1,9 +1,9 @@
 import java.io.File
 import java.io.FileNotFoundException
 import java.util.Scanner
-import kotlin.math.sqrt
+
 fun ler_arquivo(){
-    val arquivo = File("C:\\Users\\carpeado\\estudos-kotlin\\src\\main\\Controle e Tratamento de Dados\\Passo a passo.txt")
+    val arquivo = File("C:\\Users\\carpeado\\estudos-kotlin\\src\\main\\kotlin\\Passo a passo.txt")
     try {
         Scanner(arquivo).use{l ->
             while (l.hasNext()){

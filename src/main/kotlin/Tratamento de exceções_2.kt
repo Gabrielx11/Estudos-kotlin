@@ -1,12 +1,11 @@
-import java.lang.ArithmeticException
-import java.lang.Exception
-import java.lang.IllegalArgumentException
-import java.lang.NullPointerException
+
+import kotlin.ArithmeticException
+import kotlin.IllegalArgumentException
 import kotlin.math.sqrt
 fun main() {
     try {
         var s:String? = null
-        //s = ""Gabriel
+        s = "Gabriel"
         println("O tamanho da String é: ${s!!.length}")
 
         var a = 10/0
@@ -15,17 +14,17 @@ fun main() {
         var b =-9.0
         var c = sqrt(b)
         if (b<0){
-            throw  IllegalArgumentException
+            throw  IllegalArgumentException()
         }
         var x = 1
         if (x==1){
             throw  Exception("O valor de X não pode ser 1")
         }
-    }catch (e: NullPointerException){
+    }catch (e: NullPointerException){ // String
         println("A variável está vazia")
-    }catch (e: ArithmeticException){
+    }catch (e: ArithmeticException){ // Valor numérico
         println("Não existe divisão por zero")
-    }catch (e: IllegalArgumentException){
+    }catch (e: IllegalArgumentException){ //Argumento ilegal ou inadequado
         println("Não existe raiz de número negativo, sendo exclusibo para conjunto dos números complexos ")
     }catch (e: Exception){
         println("Exceção mais geral")
